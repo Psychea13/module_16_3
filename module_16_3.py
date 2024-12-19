@@ -34,7 +34,7 @@ async def update_users(user_id: int, username: str = Path(min_length=3, max_leng
 @app.delete('/user/{user_id}')
 async def delete_user(user_id: str) -> str:
     users.pop(user_id)
-    return f'User {user_id} has been deleted.'
+    return f'User {user_id} has been deleted'
 
 
 # uvicorn module_16_3:app --reload
